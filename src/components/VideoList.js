@@ -14,7 +14,6 @@ const generatePreviewList = (videos, onSelect) => {
                     onClick={() => onSelect(video)}
                     title={video.title}
                     alt={video.title}
-                    height="100"
                 />
             </Grid>
         );

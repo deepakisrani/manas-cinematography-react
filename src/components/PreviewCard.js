@@ -5,10 +5,10 @@ import { ButtonBase, Grid, Paper, Typography } from '@material-ui/core';
 const PreviewCard = (props) => {
     return (
         <Paper elevation={3} style={{ paddingLeft: "10px", paddingRight: "5px"}}>
-            <Grid onClick={props.onClick} container alignItems="center" spacing={3} direction="row">
+            <Grid onClick={props.onClick} container alignItems="center" spacing={3} direction="row" wrap="nowrap">
                 <Grid item xs={5}>
                     <ButtonBase>
-                        <img height={props.height} src={props.src} title={props.title} alt={props.alt} />
+                        <img style={{maxWidth: "100%"}} src={props.src} title={props.title} alt={props.alt} />
                     </ButtonBase>
                 </Grid>
                 <Grid item container direction="column" xs={7}>
