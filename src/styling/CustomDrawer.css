@@ -1,0 +1,11 @@
+.drawer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%
+}
+
+.bottom-content {
+    margin-left: 20px;
+}
