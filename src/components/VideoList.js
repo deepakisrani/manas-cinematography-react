@@ -8,7 +8,7 @@ import PreviewCard from './PreviewCard';
 const generatePreviewList = (videos, onSelect) => {
     return videos.map((video) => {
         return(
-            <Grid item xs={12} style={{ marginBottom: '10px' }}>
+            <Grid item xs={12} style={{ marginBottom: '10px' }} key={video.video_id}>
                 <PreviewCard
                     src={`http://i3.ytimg.com/vi/${video.video_id}/maxresdefault.jpg`}
                     onClick={() => onSelect(video)}
@@ -25,7 +25,7 @@ const VideoList = (props) => {
         <>
             {props.projects.map((project, index) => {
                 return(
-                    <Accordion defaultExpanded={index === 0}>
+                    <Accordion defaultExpanded={index === 0} key={`accordion-${index}`}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls={project.client_name}

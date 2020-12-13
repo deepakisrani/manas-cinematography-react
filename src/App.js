@@ -1,7 +1,7 @@
 import './styling/App.css';
 
 // Library Imports
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Container } from '@material-ui/core';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -24,9 +24,13 @@ import Projects from './pages/Projects';
 const App = () => {
     const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
     const [isDarkTheme, setDarkTheme] = useState(prefersDarkMode);
+
+    useEffect(() => {
+        setDarkTheme(prefersDarkMode);
+    }, [prefersDarkMode]);
+
     const palette = { ...baseTheme.palette, type: isDarkTheme ? 'dark' : 'light' }
     const themeObj = { ...baseTheme, palette  }
-
     const theme = createMuiTheme(themeObj);
 
     return (

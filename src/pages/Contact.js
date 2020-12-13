@@ -26,7 +26,7 @@ const Contact = () => {
                         <span className="icon-text">Email: <a className="unstyled-link" href="mailto: manas.tiwari.01@gmail.com">manas.tiwari.01@gmail.com</a></span>
                     </div>
                 </Typography>
-                <Typography variant="body1" align="center" gutterBottom>
+                <Typography variant="body1" component="div" align="center" gutterBottom>
                     <div className="contact-detail-container">
                         <PhoneIcon fontSize="small" />
                         <span className="icon-text">Phone: <a className="unstyled-link" href="tel: +918600278456">+91-8600278456</a></span>

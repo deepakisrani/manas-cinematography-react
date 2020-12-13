@@ -25,9 +25,9 @@ const HomePage = () => {
                 <Typography variant="h4" component="h1" align="left" gutterBottom>
                     Manas Tiwari, Cinematographer
                 </Typography>
-                {homePage.map((paragraph) => {
+                {homePage.map((paragraph, index) => {
                     return (
-                        <Typography variant="body1" component="p" align="left" gutterBottom>
+                        <Typography key={`par-${index}`} variant="body1" component="p" align="left" gutterBottom>
                             {paragraph}
                         </Typography>
                     );

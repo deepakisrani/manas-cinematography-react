@@ -21,9 +21,9 @@ const About = () => {
                 <Typography variant="h4" component="h1" align="left" gutterBottom>
                     About Me
                 </Typography>
-                {aboutMe.map((paragraph) => {
+                {aboutMe.map((paragraph, index) => {
                     return (
-                        <Typography variant="body1" component="p" align="left" gutterBottom>
+                        <Typography key={`para-${index}`} variant="body1" component="p" align="left" gutterBottom>
                             {paragraph}
                         </Typography>
                     );
