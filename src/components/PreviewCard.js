@@ -11,7 +11,7 @@ const PreviewCard = (props) => {
                         <img style={{maxWidth: "100%"}} src={props.src} title={props.title} alt={props.alt} />
                     </ButtonBase>
                 </Grid>
-                <Grid item container direction="column" xs={7}>
+                <Grid item container xs={7}>
                     <Grid item>
                         <Typography gutterBottom variant="subtitle1">
                             {props.title}
