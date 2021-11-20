@@ -37,7 +37,7 @@ const VideoList = (props) => {
                         </AccordionSummary>
 
                         <AccordionDetails>
-                            <Grid item container direction="column" spacing={3}>
+                            <Grid item container spacing={3}>
                                 {generatePreviewList(project.videos, props.onSelect)}
                             </Grid>
                         </AccordionDetails>
